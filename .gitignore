@@ -11,12 +11,6 @@ bot_sessions/
 # Docker
 Dockerfile
 
-# Babel
-.babelrc
-
-# ESLint
-.eslintrc.cjs
-
 # IDE / Editor
 .vscode/
 .idea/
