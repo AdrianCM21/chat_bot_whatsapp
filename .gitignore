@@ -1,0 +1,24 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# Logs
+*.log
+
+# Runtime data
+bot_sessions/
+
+# Docker
+Dockerfile
+
+# Babel
+.babelrc
+
+# ESLint
+.eslintrc.cjs
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
