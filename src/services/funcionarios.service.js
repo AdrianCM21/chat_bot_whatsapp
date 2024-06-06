@@ -7,11 +7,22 @@ export const getFuncionario = async (cedula) => {
             Accept: 'application/json'
         }} );
         const data =response.data.results[0]
-        return response.data.results.length ?[{body:`*Nombre del funcionario* ${data.nombres} ${data.apellidos}`},{body:`*Descripcion del nivel:* ${data.descripcionNivel}`},{body:`*Descripcion entidad:* ${data.descripcionEntidad}`},{body:`*Tipo personal:* ${data.tipoPersonal}`}]:[{body:'Funcionario no encontrado'}]
+        return verifyFuncinario(response,data)
        
     } catch (error) {
+        
         console.log('first')
         console.error('siiii este falla',error);
-        return 'Lo siento, hubo un problema al buscar una oración. Por favor, inténtalo de nuevo más tarde.';
+        return false;
     }
 };
+
+
+
+
+
+
+const verifyFuncinario =(response,data)=>{
+
+return response.data.results.length ?[{body:`*Nombre del funcionario* ${data.nombres} ${data.apellidos}`},{body:`*Descripcion del nivel:* ${data.descripcionNivel}`},{body:`*Descripcion entidad:* ${data.descripcionEntidad}`},{body:`*Tipo personal:* ${data.tipoPersonal}`}]:[{body:'Funcionario no encontrado'}]
+}
